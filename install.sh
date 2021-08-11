@@ -4,6 +4,8 @@ if [ "$(whoami)" != "root" ]
 then
     sudo chown -R $USER:$USER $PWD/*
 
+    sudo pacman -S --needed $(comm -12 <(pacman -Slq | sort) <(sort $PWD/files/package_list.txt))
+
     mkdir -p $HOME/.config
     rm -f -r -- $HOME/.config/alacritty $HOME/.config/starship_modules $HOME/.config/nvim 
     rm -f -r -- $HOME/.config/neofetch $HOME/.zshrc $HOME/.plugins.txt
@@ -20,6 +22,10 @@ then
     ln -s -T $PWD/starship_modules $HOME/.config/starship_modules
 
     dconf load / < $PWD/files/dconf.bkp
+
+    pacman -S broadcom-wl
+    rmmod b43
+    modprobe wl
 else
     echo "Don't run this script with root privileges!"
 fi
