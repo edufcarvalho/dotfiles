@@ -1,0 +1,101 @@
+[git_status]
+deleted = ""
+ahead = "↑"
+behind = "↓"
+diverged = "↕"
+
+[custom.c]
+command = "gcc -dumpversion"
+symbol = ""
+extensions = ["c"]
+style = "bold blue"
+format = "via [$symbol v$output]($style) "
+
+[custom.cpp]
+command = "gcc -dumpversion"
+symbol = ""
+extensions = ["cpp"]
+style = "bold cyan"
+format = "via [$symbol v$output]($style) "
+
+[custom.elixir]
+symbol = ""
+command = "sh ~/.config/starship_modules/.elixir.sh"
+extensions = ["exs"]
+style = "bold dimmed purple"
+format = "via [$symbol v$output]($style)"
+
+[aws]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[directory]
+read_only = " "
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+disabled = true
+
+[elm]
+symbol = " "
+
+[golang]
+symbol = " "
+
+# [haskell]
+# symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[java]
+symbol = " "
+style = "bold red"
+
+[julia]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[package]
+symbol = " "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[python]
+symbol = " "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+style = "bold dimmed red"
+
+[swift]
+symbol = "ﯣ "

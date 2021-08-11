@@ -1,0 +1,9 @@
+[user]
+	name = Eduardo Freitas de Carvalho
+	email = eduardofc@dcc.ufrj.br
+[core]
+	editor = nvim
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg2
