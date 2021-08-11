@@ -8,4 +8,4 @@
 [gpg]
 	program = gpg2
 [credential]
-	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+	helper = /usr/lib/git-core/git-credential-libsecret
