@@ -1,0 +1,11 @@
+[user]
+	email = eduardofc@ic.ufrj.br
+	name = Eduardo Freitas de Carvalho
+[core]
+	editor = nvim
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
+[commit]
+	gpgsign = true
+[include]
+	path = ~/.gitconfig.local ; hide gpg signing key and other private informations

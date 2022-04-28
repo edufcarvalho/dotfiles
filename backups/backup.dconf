@@ -1,0 +1,228 @@
+[org/cinnamon]
+alttab-switcher-delay=100
+enabled-applets=['panel1:left:0:menu@cinnamon.org:0', 'panel1:left:2:grouped-window-list@cinnamon.org:2', 'panel1:right:1:systray@cinnamon.org:3', 'panel1:right:2:xapp-status@cinnamon.org:4', 'panel1:right:3:notifications@cinnamon.org:5', 'panel1:right:5:removable-drives@cinnamon.org:7', 'panel1:right:6:keyboard@cinnamon.org:8', 'panel1:right:7:favorites@cinnamon.org:9', 'panel1:right:8:network@cinnamon.org:10', 'panel1:right:9:sound@cinnamon.org:11', 'panel1:right:10:power@cinnamon.org:12', 'panel1:right:11:calendar@cinnamon.org:13']
+enabled-desklets=@as []
+favorite-apps=@as []
+next-applet-id=15
+no-adjacent-panel-barriers=false
+panel-zone-icon-sizes='[{"panelId": 1, "left": 24, "center": 0, "right": 16}]'
+panel-zone-symbolic-icon-sizes='[{"panelId": 1, "left": 28, "center": 28, "right": 14}]'
+panel-zone-text-sizes='[{"panelId": 1, "left": 0.0, "center": 0.0, "right": 9.0}]'
+panels-height=['1:38']
+workspace-osd-visible=false
+
+[org/cinnamon/desktop/a11y/applications]
+screen-keyboard-enabled=false
+screen-reader-enabled=false
+
+[org/cinnamon/desktop/a11y/mouse]
+dwell-click-enabled=false
+dwell-threshold=10
+dwell-time=1.2
+secondary-click-enabled=false
+secondary-click-time=1.2
+
+[org/cinnamon/desktop/applications/calculator]
+exec='gnome-calculator'
+
+[org/cinnamon/desktop/applications/terminal]
+exec='alacritty'
+
+[org/cinnamon/desktop/background]
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/gnome/blobs-l.svg'
+
+[org/cinnamon/desktop/background/slideshow]
+delay=15
+image-source='xml:///usr/share/gnome-background-properties/blobs.xml'
+
+[org/cinnamon/desktop/interface]
+clock-show-date=false
+clock-show-seconds=false
+cursor-blink-time=1200
+cursor-size=24
+cursor-theme='mcmojave-cursors'
+font-name='Open Sans 10'
+gtk-theme='CBlack'
+icon-theme='ePapirus'
+scaling-factor=uint32 0
+text-scaling-factor=1.0
+toolkit-accessibility=false
+
+[org/cinnamon/desktop/keybindings]
+looking-glass-keybinding=@as []
+
+[org/cinnamon/desktop/keybindings/media-keys]
+area-screenshot=['<Primary>Print']
+area-screenshot-clip=['Print']
+screensaver=['<Super>l', 'XF86ScreenSaver']
+screenshot=@as []
+screenshot-clip=@as []
+
+[org/cinnamon/desktop/keybindings/wm]
+show-desktop=@as []
+switch-to-workspace-down=['<Control><Alt>Down']
+toggle-recording=['<Control><Shift><Alt>r']
+
+[org/cinnamon/desktop/media-handling]
+autorun-never=false
+
+[org/cinnamon/desktop/sound]
+event-sounds=false
+
+[org/cinnamon/desktop/wm/preferences]
+button-layout=':minimize,maximize,close'
+min-window-opacity=30
+theme='CBlack'
+titlebar-font='Open Sans Bold 10'
+
+[org/cinnamon/muffin]
+resize-threshold=24
+
+[org/cinnamon/settings-daemon/peripherals/keyboard]
+delay=uint32 500
+numlock-state='off'
+repeat-interval=uint32 30
+
+[org/cinnamon/settings-daemon/peripherals/mouse]
+custom-acceleration=true
+custom-threshold=true
+double-click=400
+drag-threshold=8
+motion-threshold=1
+
+[org/cinnamon/settings-daemon/peripherals/touchpad]
+motion-threshold=1
+
+[org/cinnamon/theme]
+name='Adapta'
+
+[org/gnome/desktop/a11y/applications]
+screen-keyboard-enabled=false
+screen-reader-enabled=false
+
+[org/gnome/desktop/a11y/mouse]
+dwell-click-enabled=false
+dwell-threshold=10
+dwell-time=1.2
+secondary-click-enabled=false
+secondary-click-time=1.2
+
+[org/gnome/desktop/interface]
+clock-format='24h'
+document-font-name='Open Sans 11'
+monospace-font-name='JetBrainsMono Nerd Font 12'
+toolkit-accessibility=false
+
+[org/gnome/file-roller/listing]
+list-mode='as-folder'
+name-column-width=250
+show-path=false
+sort-method='name'
+sort-type='ascending'
+
+[org/gnome/file-roller/ui]
+sidebar-width=200
+window-height=480
+window-width=600
+
+[org/gnome/gitlab/exalm/Impatience]
+color-scheme='prefer-dark'
+
+[org/gnome/libgnomekbd/keyboard]
+layouts=['us\talt-intl']
+
+[org/gnome/nautilus/preferences]
+default-folder-viewer='icon-view'
+search-filter-time-type='last_modified'
+
+[org/gnome/nautilus/window-state]
+initial-size=(890, 550)
+maximized=false
+
+[org/gnome/nm-applet/eap/7c14cf66-1ec4-45e3-a079-e8ae777e498a]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
+[org/gnome/nm-applet/eap/a1e35b4f-6ff0-4734-8445-fedf1a7a1f82]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
+[org/gnome/terminal/legacy]
+default-show-menubar=false
+menu-accelerator-enabled=true
+mnemonics-enabled=false
+theme-variant='dark'
+
+[org/gnome/terminal/legacy/keybindings]
+close-tab='<Primary>w'
+close-window='disabled'
+copy='<Super>c'
+new-tab='<Primary>t'
+new-window='<Primary>n'
+paste='<Super>v'
+
+[org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+background-color='rgb(30,30,30)'
+bold-color-same-as-fg=true
+cursor-colors-set=false
+default-size-columns=88
+default-size-rows=31
+font='JetBrainsMono Nerd Font Mono 11'
+foreground-color='rgb(204,204,204)'
+highlight-colors-set=false
+palette=['rgb(0,0,0)', 'rgb(205,49,49)', 'rgb(13,188,121)', 'rgb(229,229,16)', 'rgb(36,114,200)', 'rgb(188,63,188)', 'rgb(17,168,205)', 'rgb(229,229,229)', 'rgb(102,102,102)', 'rgb(241,76,76)', 'rgb(35,209,139)', 'rgb(245,245,67)', 'rgb(59,142,234)', 'rgb(214,112,214)', 'rgb(41,184,219)', 'rgb(229,229,229)']
+scroll-on-keystroke=true
+scrollbar-policy='never'
+use-system-font=false
+use-theme-colors=false
+
+[org/gtk/gtk4/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=true
+show-size-column=true
+show-type-column=true
+sidebar-width=166
+sort-column='name'
+sort-directories-first=false
+sort-order='ascending'
+type-format='category'
+window-size=(841, 419)
+
+[org/gtk/settings/color-chooser]
+custom-colors=[(0.80000000000000004, 0.80000000000000004, 0.80000000000000004, 1.0), (0.89803921568627454, 0.89803921568627454, 0.89803921568627454, 1.0), (0.16078431372549024, 0.72156862745098016, 0.85882352941176465, 1.0), (0.20000000000000001, 0.7803921568627451, 0.87058823529411766, 1.0), (0.83921568627450982, 0.43921568627450985, 0.83921568627450982, 1.0), (0.23137254901960783, 0.55686274509803912, 0.91764705882352937, 1.0), (0.16470588235294117, 0.4823529411764706, 0.87058823529411766, 1.0), (0.96078431372549022, 0.96078431372549022, 0.26274509803921575, 1.0)]
+selected-color=(true, 0.80000000000000004, 0.80000000000000004, 0.80000000000000004, 1.0)
+
+[org/gtk/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=true
+show-size-column=true
+show-type-column=true
+sidebar-width=148
+sort-column='name'
+sort-directories-first=false
+sort-order='ascending'
+type-format='category'
+window-position=(771, 113)
+window-size=(1018, 702)
+
+[org/nemo/desktop]
+font='Open Sans 10'
+
+[org/nemo/preferences]
+show-hidden-files=true
+
+[org/nemo/window-state]
+geometry='800x550+880+231'
+maximized=false
+sidebar-bookmark-breakpoint=0
+start-with-sidebar=true
+
+[org/x/viewer/view]
+background-color='rgb(0,0,0)'
+use-background-color=true
+
+[org/x/viewer/window]
+maximized=true
