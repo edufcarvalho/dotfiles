@@ -9,6 +9,7 @@ bison
 cinnamon
 clion
 color-scheme-simulator-git
+cronie
 dialog
 discord
 efibootmgr
@@ -63,6 +64,7 @@ noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
 npm
+opensmtpd
 openssh
 os-prober
 pacman
@@ -74,6 +76,8 @@ pycharm-professional
 python-pip
 ripgrep
 rust
+s-nail
+sd
 sed
 starship
 sudo
@@ -85,6 +89,7 @@ ttf-ms-fonts
 ttf-opensans
 ttf-symbola
 udiskie
+vi
 vim
 visual-studio-code-bin
 vlc
