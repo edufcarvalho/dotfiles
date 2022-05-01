@@ -23,3 +23,6 @@ dconf load / < $BACKUPS_DIR/backup.dconf
 
 # Install all packages
 yay -S $(cat $BACKUPS_DIR/packages.txt)
+
+# Change default shell to zsh
+chsh -s $(which zsh)
