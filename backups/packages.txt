@@ -75,6 +75,7 @@ pkgconf
 powerline-fonts
 pycharm-professional
 python-pip
+qbittorrent
 ripgrep
 rust
 s-nail
