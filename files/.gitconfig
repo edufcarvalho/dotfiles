@@ -6,6 +6,6 @@
 [credential]
 	helper = /usr/lib/git-core/git-credential-libsecret
 [commit]
-	gpgsign = true
+	gpgsign = false
 [include]
 	path = ~/.gitconfig.local ; hide gpg signing key and other private informations
