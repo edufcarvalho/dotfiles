@@ -11,7 +11,7 @@ dconf dump / > $BACKUPS_DIR/backup.dconf
 yay -Qe | awk '{print $1}' > $BACKUPS_DIR/packages.txt
 
 # Commit changes
-cd $MAIN_DIR
+cd $BACKUPS_DIR
 if [[ `git status --porcelain` ]]; then
 	git add .
 	git commit -m "[Auto] Update backups"	
