@@ -5,6 +5,9 @@ set shiftwidth=2
 " Set UTF-8
 set encoding=utf-8
 
+" Disable .viminfo
+set viminfo='0,:0,<0,@0,f0
+
 " Show line number
 set number
 
