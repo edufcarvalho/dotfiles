@@ -65,6 +65,7 @@ noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
 npm
+obs-studio
 opensmtpd
 openssh
 os-prober
@@ -151,4 +152,5 @@ xorg-xwininfo
 xorg-xwud
 xviewer
 yay
+zoom
 zsh
