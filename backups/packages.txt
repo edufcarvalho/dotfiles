@@ -47,6 +47,7 @@ linux
 linux-firmware
 lolcat
 lua
+ly
 m4
 make
 mcmojave-cursors-git
