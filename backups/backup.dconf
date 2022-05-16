@@ -209,7 +209,7 @@ sort-column='name'
 sort-directories-first=false
 sort-order='ascending'
 type-format='category'
-window-position=(771, 161)
+window-position=(771, 113)
 window-size=(1018, 702)
 
 [org/nemo/desktop]
