@@ -201,7 +201,7 @@ selected-color=(true, 0.80000000000000004, 0.80000000000000004, 0.80000000000000
 [org/gtk/settings/file-chooser]
 date-format='regular'
 location-mode='path-bar'
-show-hidden=true
+show-hidden=false
 show-size-column=true
 show-type-column=true
 sidebar-width=148
@@ -209,7 +209,7 @@ sort-column='name'
 sort-directories-first=false
 sort-order='ascending'
 type-format='category'
-window-position=(771, 113)
+window-position=(771, 161)
 window-size=(1018, 702)
 
 [org/nemo/desktop]
