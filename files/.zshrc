@@ -32,20 +32,20 @@ function xinput_manager {
 	xinput set-prop $device $id $value
 }
 
-alias \$=" "
+# ls aliases
 alias ls="exa"
 alias ll="ls -l"
 alias lt="ls --tree"
 alias la="ls -a"
 alias lla="ls -la"
 alias lta="lt -a"
-alias rr="rm -rf"
-alias cat="bat"
-alias grep="rg"
-alias unlock="sudo rm /var/lib/pacman/db.lck"
+
+# yay aliases
 alias install="yay -S"
 alias update="yay -Syuu"
 alias remove="yay -Rsc"
+
+# git aliases
 alias commit="git commit -S"
 alias clone="git clone"
 alias push="git push"
@@ -58,9 +58,17 @@ alias init="git init"
 alias amend="commit --amend"
 alias force="push --force"
 alias checkout="git checkout"
+
+# misc aliases
+alias \$=" "
 alias clear_history="truncate -s 0 .zsh_history"
 alias youtube-dl="yt-dlp"
+alias rr="rm -rf"
+alias cat="bat"
+alias grep="rg"
+alias unlock="sudo rm /var/lib/pacman/db.lck"
 
+# configure histfiles
 export HISTFILESIZE=100000
 export HISTSIZE=100000
 export HISTFILE="${HOME}/.zsh_history"
