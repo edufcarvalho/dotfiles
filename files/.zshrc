@@ -64,7 +64,7 @@ alias \$=" "
 alias clear_history="truncate -s 0 .zsh_history"
 alias youtube-dl="yt-dlp"
 alias rr="rm -rf"
-alias cat="bat"
+alias cat="bat --theme=TwoDark"
 alias grep="rg"
 alias unlock="sudo rm /var/lib/pacman/db.lck"
 
