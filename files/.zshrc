@@ -1,6 +1,7 @@
 export GPG_TTY=$(tty)
 export EDITOR='nvim'
 export VISUAL='nvim'
+
 autoload -Uz compinit 
 setopt rm_star_silent
 
@@ -58,6 +59,7 @@ alias amend="commit --amend"
 alias force="push --force"
 alias checkout="git checkout"
 alias clear_history="truncate -s 0 .zsh_history"
+alias youtube-dl="yt-dlp"
 
 export HISTFILESIZE=100000
 export HISTSIZE=100000
