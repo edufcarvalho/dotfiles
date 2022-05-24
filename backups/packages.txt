@@ -1,5 +1,6 @@
 alacritty
 antibody-bin
+aria2
 autoconf
 automake
 base
@@ -153,5 +154,6 @@ xorg-xwininfo
 xorg-xwud
 xviewer
 yay
+yt-dlp
 zoom
 zsh

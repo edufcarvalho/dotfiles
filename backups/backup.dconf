@@ -11,9 +11,19 @@ panel-zone-text-sizes='[{"panelId": 1, "left": 0.0, "center": 0.0, "right": 9.0}
 panels-height=['1:38']
 workspace-osd-visible=false
 
+[org/cinnamon/cinnamon-session]
+quit-time-delay=60
+
 [org/cinnamon/desktop/a11y/applications]
 screen-keyboard-enabled=false
 screen-reader-enabled=false
+
+[org/cinnamon/desktop/a11y/keyboard]
+bouncekeys-delay=300
+mousekeys-accel-time=300
+mousekeys-init-delay=300
+mousekeys-max-speed=10
+slowkeys-delay=300
 
 [org/cinnamon/desktop/a11y/mouse]
 dwell-click-enabled=false
@@ -67,6 +77,9 @@ toggle-recording=['<Control><Shift><Alt>r']
 [org/cinnamon/desktop/media-handling]
 autorun-never=false
 
+[org/cinnamon/desktop/privacy]
+recent-files-max-age=-1
+
 [org/cinnamon/desktop/sound]
 event-sounds=false
 
@@ -76,12 +89,17 @@ min-window-opacity=30
 theme='CBlack'
 titlebar-font='Open Sans Bold 10'
 
+[org/cinnamon/launcher]
+check-frequency=300
+memory-limit=2048
+
 [org/cinnamon/muffin]
 resize-threshold=24
 
 [org/cinnamon/settings-daemon/peripherals/keyboard]
 delay=uint32 500
 numlock-state='off'
+repeat=true
 repeat-interval=uint32 30
 
 [org/cinnamon/settings-daemon/peripherals/mouse]
@@ -110,7 +128,12 @@ secondary-click-time=1.2
 
 [org/gnome/desktop/interface]
 clock-format='24h'
+cursor-theme='mcmojave-cursors'
 document-font-name='Open Sans 11'
+font-antialiasing='grayscale'
+font-hinting='slight'
+gtk-theme='Adwaita-dark'
+icon-theme='ePapirus-Dark'
 monospace-font-name='JetBrainsMono Nerd Font 12'
 toolkit-accessibility=false
 
@@ -180,6 +203,9 @@ scroll-on-keystroke=true
 scrollbar-policy='never'
 use-system-font=false
 use-theme-colors=false
+
+[org/gnome/tweaks]
+show-extensions-notice=false
 
 [org/gtk/gtk4/settings/file-chooser]
 date-format='regular'
