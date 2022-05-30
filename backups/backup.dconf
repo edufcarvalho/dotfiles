@@ -5,10 +5,14 @@ enabled-desklets=@as []
 favorite-apps=@as []
 next-applet-id=15
 no-adjacent-panel-barriers=false
-panel-zone-icon-sizes='[{"panelId": 1, "left": 24, "center": 0, "right": 16}]'
+panel-zone-icon-sizes='[{"panelId":1,"left":24,"center":0,"right":16}]'
 panel-zone-symbolic-icon-sizes='[{"panelId": 1, "left": 28, "center": 28, "right": 14}]'
-panel-zone-text-sizes='[{"panelId": 1, "left": 0.0, "center": 0.0, "right": 9.0}]'
-panels-height=['1:38']
+panel-zone-text-sizes='[{"panelId":1,"left":0,"center":0,"right":9}]'
+panels-autohide=['1:false', '2:false']
+panels-enabled=['1:0:bottom']
+panels-height=['1:38', '2:38']
+panels-hide-delay=['1:0', '2:0']
+panels-show-delay=['1:0', '2:0']
 workspace-osd-visible=false
 
 [org/cinnamon/cinnamon-session]
