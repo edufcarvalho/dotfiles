@@ -28,6 +28,7 @@ gettext
 ghc
 ghc-libs
 git
+github-desktop-bin
 gnome-calculator
 gnome-keyring
 gnome-screenshot
