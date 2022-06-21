@@ -2,15 +2,15 @@
 alttab-switcher-delay=100
 enabled-applets=['panel1:left:0:menu@cinnamon.org:0', 'panel1:left:2:grouped-window-list@cinnamon.org:2', 'panel1:right:1:systray@cinnamon.org:3', 'panel1:right:2:xapp-status@cinnamon.org:4', 'panel1:right:3:notifications@cinnamon.org:5', 'panel1:right:5:removable-drives@cinnamon.org:7', 'panel1:right:6:keyboard@cinnamon.org:8', 'panel1:right:7:favorites@cinnamon.org:9', 'panel1:right:8:network@cinnamon.org:10', 'panel1:right:9:sound@cinnamon.org:11', 'panel1:right:10:power@cinnamon.org:12', 'panel1:right:11:calendar@cinnamon.org:13']
 enabled-desklets=@as []
-favorite-apps=['cinnamon-settings.desktop']
+favorite-apps=@as []
 next-applet-id=15
 no-adjacent-panel-barriers=false
-panel-zone-icon-sizes='[{"panelId":1,"left":24,"center":0,"right":16}]'
+panel-zone-icon-sizes='[{"panelId": 1, "left": 24, "center": 0, "right": 16}]'
 panel-zone-symbolic-icon-sizes='[{"panelId": 1, "left": 28, "center": 28, "right": 14}]'
-panel-zone-text-sizes='[{"panelId":1,"left":0,"center":0,"right":9}]'
+panel-zone-text-sizes='[{"panelId": 1, "left": 0.0, "center": 0.0, "right": 9.0}]'
 panels-autohide=['1:false', '2:false']
 panels-enabled=['1:0:bottom']
-panels-height=['1:38', '2:38']
+panels-height=['1:38']
 panels-hide-delay=['1:0', '2:0']
 panels-show-delay=['1:0', '2:0']
 workspace-osd-visible=false
@@ -80,6 +80,9 @@ toggle-recording=['<Control><Shift><Alt>r']
 
 [org/cinnamon/desktop/media-handling]
 autorun-never=false
+autorun-x-content-ignore=@as []
+autorun-x-content-open-folder=['x-content/bootable-media']
+autorun-x-content-start-app=['x-content/unix-software', 'x-content/bootable-media']
 
 [org/cinnamon/desktop/peripherals/keyboard]
 delay=uint32 500
@@ -111,7 +114,20 @@ experimental-features=['x11-randr-fractional-scaling']
 resize-threshold=24
 
 [org/cinnamon/settings-daemon/peripherals/keyboard]
+delay=uint32 500
 numlock-state='off'
+repeat=true
+repeat-interval=uint32 30
+
+[org/cinnamon/settings-daemon/peripherals/mouse]
+custom-acceleration=true
+custom-threshold=true
+double-click=400
+drag-threshold=8
+motion-threshold=1
+
+[org/cinnamon/settings-daemon/peripherals/touchpad]
+motion-threshold=1
 
 [org/cinnamon/settings-daemon/peripherals/touchscreen]
 orientation-lock=false
@@ -254,7 +270,7 @@ font='Open Sans 10'
 show-hidden-files=true
 
 [org/nemo/window-state]
-geometry='800x550+880+231'
+geometry='800x550+78+154'
 maximized=false
 sidebar-bookmark-breakpoint=0
 start-with-sidebar=true
