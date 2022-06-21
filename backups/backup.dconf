@@ -2,7 +2,7 @@
 alttab-switcher-delay=100
 enabled-applets=['panel1:left:0:menu@cinnamon.org:0', 'panel1:left:2:grouped-window-list@cinnamon.org:2', 'panel1:right:1:systray@cinnamon.org:3', 'panel1:right:2:xapp-status@cinnamon.org:4', 'panel1:right:3:notifications@cinnamon.org:5', 'panel1:right:5:removable-drives@cinnamon.org:7', 'panel1:right:6:keyboard@cinnamon.org:8', 'panel1:right:7:favorites@cinnamon.org:9', 'panel1:right:8:network@cinnamon.org:10', 'panel1:right:9:sound@cinnamon.org:11', 'panel1:right:10:power@cinnamon.org:12', 'panel1:right:11:calendar@cinnamon.org:13']
 enabled-desklets=@as []
-favorite-apps=@as []
+favorite-apps=['cinnamon-settings.desktop']
 next-applet-id=15
 no-adjacent-panel-barriers=false
 panel-zone-icon-sizes='[{"panelId":1,"left":24,"center":0,"right":16}]'
@@ -81,6 +81,15 @@ toggle-recording=['<Control><Shift><Alt>r']
 [org/cinnamon/desktop/media-handling]
 autorun-never=false
 
+[org/cinnamon/desktop/peripherals/keyboard]
+delay=uint32 500
+repeat=true
+repeat-interval=uint32 30
+
+[org/cinnamon/desktop/peripherals/mouse]
+double-click=400
+drag-threshold=8
+
 [org/cinnamon/desktop/privacy]
 recent-files-max-age=-1
 
@@ -98,23 +107,14 @@ check-frequency=300
 memory-limit=2048
 
 [org/cinnamon/muffin]
+experimental-features=['x11-randr-fractional-scaling']
 resize-threshold=24
 
 [org/cinnamon/settings-daemon/peripherals/keyboard]
-delay=uint32 500
 numlock-state='off'
-repeat=true
-repeat-interval=uint32 30
 
-[org/cinnamon/settings-daemon/peripherals/mouse]
-custom-acceleration=true
-custom-threshold=true
-double-click=400
-drag-threshold=8
-motion-threshold=1
-
-[org/cinnamon/settings-daemon/peripherals/touchpad]
-motion-threshold=1
+[org/cinnamon/settings-daemon/peripherals/touchscreen]
+orientation-lock=false
 
 [org/cinnamon/theme]
 name='Adapta'
@@ -170,12 +170,17 @@ maximized=false
 [org/gnome/nm-applet]
 disable-connected-notifications=true
 disable-disconnected-notifications=true
+suppress-wireless-networks-available=true
 
 [org/gnome/nm-applet/eap/7c14cf66-1ec4-45e3-a079-e8ae777e498a]
 ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
 [org/gnome/nm-applet/eap/a1e35b4f-6ff0-4734-8445-fedf1a7a1f82]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
+[org/gnome/nm-applet/eap/aa824720-0072-4e1a-b76c-bf8445069b3d]
 ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
