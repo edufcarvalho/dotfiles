@@ -26,7 +26,7 @@ fi
 
 # Install all packages if on arch
 if [ -f "/etc/arch-release" ]; then
-	PACKAGE_LIST=$(comm -1 -3 --nocheck-order <(yay -Qe | awk '{print $1}') .dotfiles/backups/packages.txt)
+	PACKAGE_LIST=$(comm -1 -3 --nocheck-order <(yay -Qe | awk '{print $1}') /home/eduardo/.dotfiles/backups/packages.txt)
 	yay -S $PACKAGE_LIST
 fi
 
