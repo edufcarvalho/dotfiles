@@ -114,20 +114,7 @@ experimental-features=['x11-randr-fractional-scaling']
 resize-threshold=24
 
 [org/cinnamon/settings-daemon/peripherals/keyboard]
-delay=uint32 500
 numlock-state='off'
-repeat=true
-repeat-interval=uint32 30
-
-[org/cinnamon/settings-daemon/peripherals/mouse]
-custom-acceleration=true
-custom-threshold=true
-double-click=400
-drag-threshold=8
-motion-threshold=1
-
-[org/cinnamon/settings-daemon/peripherals/touchpad]
-motion-threshold=1
 
 [org/cinnamon/settings-daemon/peripherals/touchscreen]
 orientation-lock=false
