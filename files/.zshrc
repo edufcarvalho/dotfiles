@@ -2,6 +2,10 @@ export GPG_TTY=$(tty)
 export EDITOR='nvim'
 export VISUAL='nvim'
 
+# asdf setup
+. $HOME/.asdf/asdf.sh
+fpath=(${ASDF_DIR}/completions $fpath)
+
 autoload -Uz compinit 
 setopt rm_star_silent
 
