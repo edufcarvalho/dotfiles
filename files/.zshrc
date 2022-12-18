@@ -2,6 +2,15 @@ export GPG_TTY=$(tty)
 export EDITOR='nvim'
 export VISUAL='nvim'
 
+# android emulator envvars
+export JAVA_PATH=/usr/lib/jvm/java-11-openjdk/bin/java
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$JAVA_PATH
+
 # asdf setup
 . $HOME/.asdf/asdf.sh
 fpath=(${ASDF_DIR}/completions $fpath)
@@ -22,18 +31,6 @@ antibody bundle < ~/.zsh_plugins.txt
 function mkcd {
 	dir="$*";
 	mkdir $dir && cd $dir
-}
-
-function xinput_manager {
-	xinput --list --short
-	echo -n "Which device you want to show props? "
-	read device
-	xinput list-props $device
-	echo -n "Which value id you want to change? "
-	read id
-	echo -n "To what? "
-	read value
-	xinput set-prop $device $id $value
 }
 
 # ls aliases
@@ -62,6 +59,7 @@ alias init="git init"
 alias amend="commit --amend"
 alias force="push --force"
 alias checkout="git checkout"
+alias merge="git merge"
 
 # misc aliases
 alias \$=" "

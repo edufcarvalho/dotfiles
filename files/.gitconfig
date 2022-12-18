@@ -1,5 +1,5 @@
 [user]
-	email = eduardofc@ic.ufrj.br
+	email = eduardo.carvalho@pier.digital
 	name = Eduardo Freitas de Carvalho
 [core]
 	editor = nvim
@@ -9,3 +9,5 @@
 	gpgsign = false
 [include]
 	path = ~/.gitconfig.local ; hide gpg signing key and other private informations
+[push]
+	autoSetupRemote = true
