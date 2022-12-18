@@ -10,4 +10,3 @@ files/.config/**
 !files/.config/neofetch/**
 !files/.config/htop/
 !files/.config/htop/**
-!files/.config/nvim/lua/user/init.lua

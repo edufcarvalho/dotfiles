@@ -18,6 +18,10 @@ ln -sf $DOTFILES_DIR/.zsh_plugins.txt $HOME/.zsh_plugins.txt
 ln -sf $DOTFILES_DIR/.zshrc $HOME/.zshrc
 ln -sf $DOTFILES_DIR/.config $HOME/.config
 
+# Clone AstroNvim and symlink custom configuration
+git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+ln -sf $DOTFILES_DIR/nvim_user $HOME/.config/nvim/lua/user
+
 # Restore dconf backup if on cinnamon
 if [ $XDG_CURRENT_DESKTOP == $DEFAULT_DE ]; then
 	dconf reset -f /
@@ -36,3 +40,6 @@ if [ -f "/bin/zsh" ]; then
 else
 	echo "Install zsh and run the script again"
 fi
+
+echo "Run neovim to complete configuration, don't forget to install the language tools (servers, linters and formatters)"
+
