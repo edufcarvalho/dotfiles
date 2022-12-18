@@ -8,10 +8,5 @@ files/.config/**
 !files/.config/starship.toml
 !files/.config/neofetch/
 !files/.config/neofetch/**
-!files/.config/nvim/
-!files/.config/nvim/**
 !files/.config/htop/
 !files/.config/htop/**
-
-# Ignore neovim plugins folder
-files/.config/nvim/plugged
