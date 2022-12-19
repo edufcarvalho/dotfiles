@@ -1,5 +1,5 @@
 # make tmux autoload
-if [ "$TMUX" = "" ]; then exec tmux; fi
+if [ -n "$NVIM" ] && [ "$TMUX" = "" ]; then exec tmux; fi
 
 export GPG_TTY=$(tty)
 export EDITOR='nvim'
