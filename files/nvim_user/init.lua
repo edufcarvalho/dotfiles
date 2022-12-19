@@ -31,6 +31,7 @@ local config = {
     },
     t = {
       ["<esc>"] = { "<C-\\><C-n>" }, -- quit terminal mode
+      ["<C-q>"] = { "<cmd>:ToggleTerm<cr>" }, -- toggle terminal with quit current window binding
     }
   },
 
