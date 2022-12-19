@@ -83,9 +83,8 @@ selection:
 key_bindings:
   - { key: V,        mods: Command,       action: Paste                        }
   - { key: C,        mods: Command,       action: Copy                         }
-  - { key: W,        mods: Control,       action: Quit                         }    
+  - { key: W,        mods: Control,       action: Quit                         }
   - { key: N,        mods: Control,       action: SpawnNewInstance             }
 
 shell:
   program: /bin/zsh
-

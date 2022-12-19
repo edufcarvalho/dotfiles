@@ -1,3 +1,6 @@
+# make tmux autoload
+if [ "$TMUX" = "" ]; then exec tmux; fi
+
 export GPG_TTY=$(tty)
 export EDITOR='nvim'
 export VISUAL='nvim'
@@ -69,6 +72,10 @@ alias rr="rm -rf"
 alias cat="bat --theme=TwoDark"
 alias grep="rg"
 alias unlock="sudo rm /var/lib/pacman/db.lck"
+
+# tmux aliases
+alias t="tmux"
+alias s="tmux split-pane -h"
 
 # configure histfiles
 export HISTFILESIZE=100000

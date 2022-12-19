@@ -12,14 +12,25 @@ local config = {
       ["<C-r>"] = { "<C-o><C-r>" }, -- redo file
       ["<C-q>"] = { "<C-o>:q!<CR>" }, -- quit current window
       ["<C-s>"] = { "<C-o>:up<CR>" }, -- save file
+      [""] = { "<C-o><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>" }, -- comment current line
+      ["<C-t>"] = { "<C-o><cmd>ToggleTerm size=10 direction=horizontal<CR>" } -- toggle terminal
     },
     v = {
       ["<C-c>"] = { "\"+y" }, -- copy selected text
       ["<C-q>"] = { ":q!<CR>" }, -- quit current window
       ["<C-z>"] = { "<Nop>" }, -- ignore suspend
+      [""] = { "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>" }, -- comment selected text
+      ["<C-t>"] = { "<esc><cmd>ToggleTerm size=10 direction=horizontal<CR>" }, -- toggle terminal
     },
     n = {
       ["<C-z>"] = { "<Nop>" }, -- ignore suspend
+      [""] = { function() require("Comment.api").toggle.linewise.current() end }, -- comment current line
+      ["<C-t>"] = { "<cmd>ToggleTerm size=10 direction=horizontal<CR>" }, -- toggle terminal
+      ["\\"] = { "<cmd>vsplit<cr>" }, -- split window vertically
+      ["|"] = { "<cmd>split<cr>" }, -- split window horizontally
+    },
+    t = {
+      ["<esc>"] = { "<C-\\><C-n>" }, -- quit terminal mode
     }
   },
 
@@ -33,11 +44,11 @@ local config = {
     init = {
       -- enable endwise
       ["RRethy/nvim-treesitter-endwise"] = {
-        require('nvim-treesitter.configs').setup({
+        require('nvim-treesitter.configs').setup {
           endwise = {
             enable = true,
           },
-        })
+        }
       },
     },
   },
