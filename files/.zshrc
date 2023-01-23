@@ -72,6 +72,7 @@ alias rr="rm -rf"
 alias cat="bat --theme=TwoDark"
 alias grep="rg"
 alias unlock="sudo rm /var/lib/pacman/db.lck"
+alias db-reset="make db-drop-setup && make db-setup && make db-migrate"
 
 # tmux aliases
 alias t="tmux"

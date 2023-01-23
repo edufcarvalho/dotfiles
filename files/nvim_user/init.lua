@@ -13,7 +13,8 @@ local config = {
       ["<C-q>"] = { "<C-o>:q!<CR>" }, -- quit current window
       ["<C-s>"] = { "<C-o>:up<CR>" }, -- save file
       [""] = { "<C-o><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>" }, -- comment current line
-      ["<C-t>"] = { "<C-o><cmd>ToggleTerm size=10 direction=horizontal<CR>" } -- toggle terminal
+      ["<C-t>"] = { "<C-o><cmd>ToggleTerm size=10 direction=horizontal<CR>" }, -- toggle terminal
+      ["<C-d>"] = { "<C-o>:%substitute/" }, -- start substitution mode
     },
     v = {
       ["<C-c>"] = { "\"+y" }, -- copy selected text
