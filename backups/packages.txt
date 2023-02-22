@@ -11,7 +11,6 @@ intel-ucode
 jupyter-notebook
 neofetch
 neovim
-nerd-fonts-jetbrains-mono
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
@@ -39,6 +38,5 @@ visual-studio-code-bin
 vlc
 xorg
 yay-bin
-zensu
 zoom
 zsh
