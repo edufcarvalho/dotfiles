@@ -21,6 +21,12 @@ ln -sf $DOTFILES_DIR/.config/alacritty $HOME/.config/alacritty
 ln -sf $DOTFILES_DIR/.config/htop $HOME/.config/htop
 ln -sf $DOTFILES_DIR/.config/starship.toml $HOME/.config/starship.toml
 
+# Install all packages if on arch
+if [ -f "/etc/arch-release" ]; then
+	PACKAGE_LIST=$(comm -1 -3 --nocheck-order <(yay -Qe | awk '{print $1}') /home/eduardo/.dotfiles/backups/packages.txt)
+	yay -S $PACKAGE_LIST
+fi
+
 # Change default shell to zsh if installed
 if [ -f "/bin/zsh" ]; then
 	chsh -s $(which zsh)
