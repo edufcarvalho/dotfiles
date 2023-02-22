@@ -18,7 +18,7 @@ export PATH=$PATH:$JAVA_PATH
 . $HOME/.asdf/asdf.sh
 fpath=(${ASDF_DIR}/completions $fpath)
 
-autoload -Uz compinit 
+autoload -Uz compinit && compinit
 setopt rm_star_silent
 
 if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
@@ -73,10 +73,6 @@ alias cat="bat --theme=TwoDark"
 alias grep="rg"
 alias unlock="sudo rm /var/lib/pacman/db.lck"
 alias db-reset="make db-drop-setup && make db-setup && make db-migrate"
-
-# tmux aliases
-alias t="tmux"
-alias s="tmux split-pane -h"
 
 # configure histfiles
 export HISTFILESIZE=100000
