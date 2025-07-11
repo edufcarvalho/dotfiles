@@ -1,10 +1,8 @@
 [user]
-	email = eduardo.carvalho@pier.digital
+	email = eduardo.carvalho@quintoandar.com.br
 	name = Eduardo Freitas de Carvalho
 [core]
 	editor = nvim
-[credential]
-	helper = /usr/lib/git-core/git-credential-libsecret
 [commit]
 	gpgsign = false
 [include]

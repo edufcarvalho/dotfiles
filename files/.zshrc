@@ -1,22 +1,16 @@
-# make tmux autoload
-if [ -n "$NVIM" ] && [ "$TMUX" = "" ]; then exec tmux; fi
+# add bin and cargo files to path
+export PATH='/bin:/usr/bin:/usr/local/bin:/sbin:/Users/eduardo.carvalho/.cargo/bin:$PATH'
 
-export GPG_TTY=$(tty)
+# enable homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# editor and gpg
 export EDITOR='nvim'
 export VISUAL='nvim'
 
-# android emulator envvars
-export JAVA_PATH=/usr/lib/jvm/java-11-openjdk/bin/java
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:$JAVA_PATH
-
 # asdf setup
-. $HOME/.asdf/asdf.sh
-fpath=(${ASDF_DIR}/completions $fpath)
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
 
 autoload -Uz compinit && compinit
 setopt rm_star_silent
@@ -27,9 +21,10 @@ else
 	compinit -C;
 fi;
 
+# enable shell plugins
 eval "$(starship init zsh)"
-source <(antibody init)
-antibody bundle < ~/.zsh_plugins.txt
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh > /dev/null 2>&1
+antidote bundle < ~/.zsh_plugins.txt > /dev/null 2>&1
 
 function mkcd {
 	dir="$*";
@@ -45,9 +40,9 @@ alias lla="ls -la"
 alias lta="lt -a"
 
 # yay aliases
-alias install="yay -S"
-alias update="yay -Syuu"
-alias remove="yay -Rsc"
+alias install="brew install"
+alias update="brew update && brew upgrade"
+alias remove="brew uninstall"
 
 # git aliases
 alias commit="git commit -S"
@@ -71,13 +66,9 @@ alias youtube-dl="yt-dlp"
 alias rr="rm -rf"
 alias cat="bat --theme=TwoDark"
 alias grep="rg"
-alias unlock="sudo rm /var/lib/pacman/db.lck"
-alias db-reset="make db-drop-setup && make db-setup && make db-migrate"
 
 # configure histfiles
 export HISTFILESIZE=100000
 export HISTSIZE=100000
 export HISTFILE="${HOME}/.zsh_history"
 export SAVEHIST=10000000
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
