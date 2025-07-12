@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # add bin and cargo files to path
 export PATH='/bin:/usr/bin:/usr/local/bin:/sbin:/Users/eduardo.carvalho/.cargo/bin:$PATH'
 
@@ -22,9 +29,8 @@ else
 fi;
 
 # enable shell plugins
-eval "$(starship init zsh)"
-source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh > /dev/null 2>&1
-antidote bundle < ~/.zsh_plugins.txt > /dev/null 2>&1
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+antidote load < ~/.zsh_plugins.txt > /dev/null 2>&1
 
 function mkcd {
 	dir="$*";
@@ -72,3 +78,6 @@ export HISTFILESIZE=100000
 export HISTSIZE=100000
 export HISTFILE="${HOME}/.zsh_history"
 export SAVEHIST=10000000
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
