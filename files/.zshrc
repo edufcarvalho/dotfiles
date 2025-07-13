@@ -12,6 +12,7 @@ export PATH='/bin:/usr/bin:/usr/local/bin:/sbin:/Users/eduardo.carvalho/.cargo/b
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # editor and gpg
+export GPG_TTY=`tty`
 export EDITOR='nvim'
 export VISUAL='nvim'
 
