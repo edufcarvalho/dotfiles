@@ -65,6 +65,8 @@ alias amend="commit --amend"
 alias force="push --force"
 alias checkout="git checkout"
 alias merge="git merge"
+alias rebase=˜"git rebase"
+alias revert="git revert"
 
 # misc aliases
 alias \$=" "
