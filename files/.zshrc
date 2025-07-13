@@ -5,6 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# initialize p10k
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 # add bin and cargo files to path
 export PATH='/bin:/usr/bin:/usr/local/bin:/sbin:/Users/eduardo.carvalho/.cargo/bin:$PATH'
 
@@ -81,6 +84,3 @@ export HISTFILESIZE=100000
 export HISTSIZE=100000
 export HISTFILE="${HOME}/.zsh_history"
 export SAVEHIST=10000000
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
