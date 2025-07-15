@@ -9,3 +9,14 @@
 	path = ~/.gitconfig.local ; hide gpg signing key and other private informations
 [push]
 	autoSetupRemote = true
+[init]
+	defaultBranch = main
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = True
+	pager = True

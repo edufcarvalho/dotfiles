@@ -9,10 +9,11 @@ fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # add bin and cargo files to path
-export PATH='/bin:/usr/bin:/usr/local/bin:/sbin:/Users/eduardo.carvalho/.cargo/bin:$PATH'
+export PATH='/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/Users/eduardo.carvalho/.cargo/bin:$PATH'
 
 # enable homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
+export HOMEBREW_NO_ENV_HINTS=1
 
 # editor and gpg
 export GPG_TTY=`tty`
@@ -84,3 +85,14 @@ export HISTFILESIZE=100000
 export HISTSIZE=100000
 export HISTFILE="${HOME}/.zsh_history"
 export SAVEHIST=10000000
+
+# this must be at the eof to work
+export SDKMAN_DIR="/Users/eduardo.carvalho/.sdkman"
+[[ -s "/Users/eduardo.carvalho/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/eduardo.carvalho/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_OFFLINE_MODE=false
+# BEGIN ANSIBLE MANAGED BLOCK
+export SDKMAN_DIR="/Users/eduardo.carvalho/.sdkman"
+[[ -s "/Users/eduardo.carvalho/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/eduardo.carvalho/.sdkman/bin/sdkman-init.sh"
+# END ANSIBLE MANAGED BLOCK
+source /Users/eduardo.carvalho/pyenv/.pyenvrc
+source /Users/eduardo.carvalho/pyenv/completions/pyenv.zsh
