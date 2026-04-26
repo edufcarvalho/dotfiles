@@ -1,0 +1,97 @@
+# {{ .chezmoi.command }} asdf to path
+export PATH="${ASDF_DATA_DIR{{ .chezmoi.pathListSeparator }}-$HOME{{ .chezmoi.pathSeparator }}.asdf}{{ .chezmoi.pathSeparator }}shims{{ .chezmoi.pathListSeparator }}$PATH"
+export fpath=(${ASDF_DATA_DIR{{ .chezmoi.pathListSeparator }}-$HOME{{ .chezmoi.pathSeparator }}.asdf}{{ .chezmoi.pathSeparator }}completions $fpath)
+autoload -Uz compinit && compinit
+
+# {{ .chezmoi.command }} bin and cargo files to path
+export PATH="{{ .chezmoi.pathSeparator }}bin{{ .chezmoi.pathListSeparator }}{{ .chezmoi.pathSeparator }}usr{{ .chezmoi.pathSeparator }}bin{{ .chezmoi.pathListSeparator }}{{ .chezmoi.pathSeparator }}usr{{ .chezmoi.pathSeparator }}local{{ .chezmoi.pathSeparator }}bin{{ .chezmoi.pathListSeparator }}{{ .chezmoi.pathSeparator }}sbin{{ .chezmoi.pathListSeparator }}{{ .chezmoi.pathSeparator }}usr{{ .chezmoi.pathSeparator }}sbin{{ .chezmoi.pathListSeparator }}{{ .chezmoi.homeDir }}{{ .chezmoi.pathSeparator }}.cargo{{ .chezmoi.pathSeparator }}bin{{ .chezmoi.pathListSeparator }}$PATH"
+
+# {{ .chezmoi.command }} secrets to .zshrc
+source $HOME{{ .chezmoi.pathSeparator }}.secrets.zsh
+
+# {{ .chezmoi.command }} snap to path
+export PATH="{{ .chezmoi.pathSeparator }}var{{ .chezmoi.pathSeparator }}lib{{ .chezmoi.pathSeparator }}snapd{{ .chezmoi.pathSeparator }}snap{{ .chezmoi.pathSeparator }}bin{{ .chezmoi.pathListSeparator }}$PATH"
+
+#enable prompt
+eval "$(starship init zsh)"
+
+source '{{ .chezmoi.pathSeparator }}usr{{ .chezmoi.pathSeparator }}share{{ .chezmoi.pathSeparator }}zsh-antidote{{ .chezmoi.pathSeparator }}antidote.zsh'
+antidote load < ~{{ .chezmoi.pathSeparator }}.zsh_plugins.txt > {{ .chezmoi.pathSeparator }}dev{{ .chezmoi.pathSeparator }}null 2>&1
+
+# ignore some history commands
+export HISTORY_IGNORE="(\&|[bf]g|c|clear|history|exit|q|pwd|* --help)"
+
+# solve messed up copy paste.
+export DISABLE_MAGIC_FUNCTIONS="true"
+
+# enable command {{ .chezmoi.config.color }}-correction.
+export ENABLE_CORRECTION="true"
+
+# enable completion loading dots
+export COMPLETION_WAITING_DOTS="true"
+
+# make history work from all shells instead of just the last one closed.
+export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+
+# function to make a directory and cd into it directly
+function mkcd {
+	dir="$*";
+	mkdir $dir && cd $dir
+}
+
+# ls alises
+alias ls="eza"
+alias ll="ls -l"
+alias lt="ls --tree"
+alias la="ls -a"
+alias lla="ls -la"
+alias lta="lt -a"
+
+# pacman aliases
+alias pacman="yay"
+alias remove="pacman -Rns"
+alias install="pacman -S"
+alias update="pacman -Syu"
+alias search="pacman -Ss"
+alias list="pacman -Q"
+alias info="pacman -Si"
+alias clean="pacman -Scc"
+alias upgrade="pacman -Syu"
+alias remove-orphans="pacman -Rns $(pacman -Qtdq)"
+alias unlock="sudo rm {{ .chezmoi.pathSeparator }}var{{ .chezmoi.pathSeparator }}lib{{ .chezmoi.pathSeparator }}pacman{{ .chezmoi.pathSeparator }}db.lck"
+
+# {{ .chezmoi.config.git.command }} aliases
+alias {{ .chezmoi.config.git.command }}="hub"
+alias commit="{{ .chezmoi.config.git.command }} commit -S"
+alias clone="{{ .chezmoi.config.git.command }} clone"
+alias push="{{ .chezmoi.config.git.command }} push"
+alias pull="{{ .chezmoi.config.git.command }} pull"
+alias fetch="{{ .chezmoi.config.git.command }} fetch"
+alias branch="{{ .chezmoi.config.git.command }} branch"
+alias status="{{ .chezmoi.config.git.command }} status"
+alias {{ .chezmoi.command }}="{{ .chezmoi.config.git.command }} {{ .chezmoi.command }}"
+alias init="{{ .chezmoi.config.git.command }} init"
+alias amend="commit --amend"
+alias force="push --force"
+alias checkout="{{ .chezmoi.config.git.command }} checkout"
+alias merge="{{ .chezmoi.config.git.command }} merge"
+alias rebase="{{ .chezmoi.config.git.command }} rebase"
+alias revert="{{ .chezmoi.config.git.command }} revert"
+
+# misc aliases
+alias \$=""
+alias c="clear"
+alias jctl="journalctl -p 3 -xb"
+alias clear_history="truncate -s 0 .zsh_history"
+alias youtube-dl="yt-dlp"
+alias rr="rm -rf"
+alias cat="bat --theme=TwoDark"
+alias grep="rg"
+alias f="fzf"
+
+# history configuration
+HISTFILE=~{{ .chezmoi.pathSeparator }}.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt share_history
+setopt hist_ignore_dups
