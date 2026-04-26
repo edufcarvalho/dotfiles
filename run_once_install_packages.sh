@@ -2,8 +2,7 @@
 
 set -euo pipefail
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PACKAGES_FILE="${SCRIPT_DIR}/packages.yaml"
+PACKAGES_FILE="/home/eduardo/.local/share/chezmoi/.packages.yaml"
 
 log() {
   printf '[install-packages] %s\n' "$*"
@@ -42,6 +41,11 @@ main() {
 
   mapfile -t packages < <(read_cachy_packages)
   (( ${#packages[@]} > 0 )) || fail "No packages found under packages.cachy in ${PACKAGES_FILE}"
+
+  if [[ ! -t 0 ]] && ! sudo -n true >/dev/null 2>&1; then
+    log "Skipping package installation because sudo requires a password in a non-interactive session."
+    exit 0
+  fi
 
   log "Installing yay"
   sudo pacman -S --needed yay-bin

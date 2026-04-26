@@ -1,15 +1,15 @@
-# {{ .chezmoi.command }} asdf to path
+# add asdf to path
 export PATH="${ASDF_DATA_DIR{{ .chezmoi.pathListSeparator }}-$HOME{{ .chezmoi.pathSeparator }}.asdf}{{ .chezmoi.pathSeparator }}shims{{ .chezmoi.pathListSeparator }}$PATH"
 export fpath=(${ASDF_DATA_DIR{{ .chezmoi.pathListSeparator }}-$HOME{{ .chezmoi.pathSeparator }}.asdf}{{ .chezmoi.pathSeparator }}completions $fpath)
 autoload -Uz compinit && compinit
 
-# {{ .chezmoi.command }} bin and cargo files to path
+# add bin and cargo files to path
 export PATH="{{ .chezmoi.pathSeparator }}bin{{ .chezmoi.pathListSeparator }}{{ .chezmoi.pathSeparator }}usr{{ .chezmoi.pathSeparator }}bin{{ .chezmoi.pathListSeparator }}{{ .chezmoi.pathSeparator }}usr{{ .chezmoi.pathSeparator }}local{{ .chezmoi.pathSeparator }}bin{{ .chezmoi.pathListSeparator }}{{ .chezmoi.pathSeparator }}sbin{{ .chezmoi.pathListSeparator }}{{ .chezmoi.pathSeparator }}usr{{ .chezmoi.pathSeparator }}sbin{{ .chezmoi.pathListSeparator }}{{ .chezmoi.homeDir }}{{ .chezmoi.pathSeparator }}.cargo{{ .chezmoi.pathSeparator }}bin{{ .chezmoi.pathListSeparator }}$PATH"
 
-# {{ .chezmoi.command }} secrets to .zshrc
+# add secrets to .zshrc
 source $HOME{{ .chezmoi.pathSeparator }}.secrets.zsh
 
-# {{ .chezmoi.command }} snap to path
+# add snap to path
 export PATH="{{ .chezmoi.pathSeparator }}var{{ .chezmoi.pathSeparator }}lib{{ .chezmoi.pathSeparator }}snapd{{ .chezmoi.pathSeparator }}snap{{ .chezmoi.pathSeparator }}bin{{ .chezmoi.pathListSeparator }}$PATH"
 
 #enable prompt
@@ -24,7 +24,7 @@ export HISTORY_IGNORE="(\&|[bf]g|c|clear|history|exit|q|pwd|* --help)"
 # solve messed up copy paste.
 export DISABLE_MAGIC_FUNCTIONS="true"
 
-# enable command {{ .chezmoi.config.color }}-correction.
+# enable command auto-correction.
 export ENABLE_CORRECTION="true"
 
 # enable completion loading dots
@@ -69,7 +69,7 @@ alias pull="{{ .chezmoi.config.git.command }} pull"
 alias fetch="{{ .chezmoi.config.git.command }} fetch"
 alias branch="{{ .chezmoi.config.git.command }} branch"
 alias status="{{ .chezmoi.config.git.command }} status"
-alias {{ .chezmoi.command }}="{{ .chezmoi.config.git.command }} {{ .chezmoi.command }}"
+alias apply="{{ .chezmoi.config.git.command }} apply"
 alias init="{{ .chezmoi.config.git.command }} init"
 alias amend="commit --amend"
 alias force="push --force"
