@@ -1,0 +1,9 @@
+[init]
+	defaultBranch = main
+[user]
+	email = eduardofc@ic.ufrj.br
+	name = Eduardo de Carvalho
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[core]
+	excludesfile = .codex
