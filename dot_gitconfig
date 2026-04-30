@@ -7,3 +7,6 @@
 	insteadOf = https://github.com/
 [core]
 	excludesfile = .codex
+	editor = vim
+[push]
+	autoSetupRemote = true
