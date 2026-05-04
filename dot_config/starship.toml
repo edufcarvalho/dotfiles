@@ -1,4 +1,8 @@
-"$schema" = 'https{{ .chezmoi.pathListSeparator }}{{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }}starship.rs{{ .chezmoi.pathSeparator }}config-schema.{{ .chezmoi.config.format }}'
+"$schema" = 'https://starship.rs/config-schema.json'
+
+[character]
+success_symbol = "[>](bold green)"
+error_symbol = "[x](bold red)"
 
 [aws]
 symbol = " "
@@ -33,7 +37,7 @@ symbol = " "
 [directory]
 read_only = " 󰌾"
 
-[{{ .chezmoi.config.docker.command }}_context]
+[docker_context]
 symbol = " "
 
 [elixir]
@@ -54,10 +58,10 @@ symbol = " "
 [gcloud]
 symbol = " "
 
-[{{ .chezmoi.config.git.command }}_branch]
+[git_branch]
 symbol = " "
 
-[{{ .chezmoi.config.git.command }}_commit]
+[git_commit]
 tag_symbol = '  '
 
 [golang]
@@ -134,7 +138,7 @@ HardenedBSD = "󰞌 "
 Illumos = "󰈸 "
 Ios = "󰀷 "
 Kali = " "
-{{ .chezmoi.kernel.ostype }} = " "
+Linux = " "
 Mabox = " "
 Macos = " "
 Manjaro = " "
@@ -164,7 +168,7 @@ Zorin = " "
 [package]
 symbol = "󰏗 "
 
-[{{ .chezmoi.config.interpreters.pl.command }}]
+[perl]
 symbol = " "
 
 [php]
@@ -182,7 +186,7 @@ symbol = " "
 [rlang]
 symbol = "󰟔 "
 
-[{{ .chezmoi.config.interpreters.rb.command }}]
+[ruby]
 symbol = " "
 
 [rust]

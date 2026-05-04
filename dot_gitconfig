@@ -3,6 +3,7 @@
 [user]
 	email = eduardofc@ic.ufrj.br
 	name = Eduardo de Carvalho
+	signingkey = 692BEB98A8C122D9
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [core]
@@ -10,3 +11,7 @@
 	editor = vim
 [push]
 	autoSetupRemote = true
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
